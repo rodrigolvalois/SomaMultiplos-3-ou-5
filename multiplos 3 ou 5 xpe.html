@@ -1,0 +1,36 @@
+<html>
+    <script>
+        function somaMultiplos(numero) { 
+            var x =3;
+            var y=5;
+            var z=15;
+            var somax = 0;
+            var somay = 0;
+            var somaz = 0;
+
+            //Calculando soma dos multiplos de 3, sendo identificados pelo resto da divisão e adicionados a variável de soma
+            for (var i = 0; i < numero; i++) {
+            if(i % x === 0) {
+                somax += i; }
+             }
+
+             //Calculando soma dos multiplos de 5, da mesma forma
+             for (var i = 0; i < numero; i++) {
+            if(i % y === 0) {
+                somay += i; }
+             }
+
+             //Calculando a soma dos multiplos de 15, já que seriam considerados de forma duplicadam, em comum a 3 e 5
+             for (var i = 0; i < numero; i++) {
+            if(i % z === 0) {
+                somaz += i; }
+             }
+            
+             //Definindo soma dos multiplos de 3 ou 5 a partir da soma de seus multiplos e subtraindo os multiplos de 15
+             resultado = somax + somay - somaz;
+
+             //Mostrando resultado
+             console.log("resultado: " + resultado)
+        }
+    </script>
+</html>
